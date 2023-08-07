@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+:root {
+    --colorPadrao: rgb(240, 216, 2);
+}
+
+.imgInicio {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border: 1px solid black;
+}
+
+.imgInicio::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), rgba(0, 0, 0, 0.7921568627)), url("images/banner-bg.png");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+.header {
+    color: var(--colorPadrao);
+    width: 100%;
+    max-width: 75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 60em;
+    margin: 190px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menuIcon {
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.menuIcon:hover {
+    color: var(--colorPadrao);
+}
+
+.conteudo h1 {
+    font-size: 45px;
+    color: white;
+}
+
+@media screen and (max-width:740px) {
+    .conteudo h1 {
+        font-size: 35px !important;
+        color: white;
+    }
+
+    .conteudo p {
+        font-size: 23px !important;
+        color: white;
+    }
+}
+
+@media screen and (max-width:538px) {
+    .conteudo h1 {
+        font-size: 23px !important;
+        color: white;
+    }
+
+    .conteudo p {
+        font-size: 17px !important;
+        color: white;
+    }
+}
+
+.conteudo p {
+    font-size: 25px;
+    color: white;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.conteudo .button {
+    padding: 15px 22px;
+    background-color: var(--colorPadrao);
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.conteudo .button:hover {
+    background-color: #fff;
+}
+
+
+.menuContainer {
+    position: fixed;
+    left: 0;
+    top: 65px;
+    background-color: var(--colorPadrao);
+    height: 100vh;
+    width: 25%;
+    display: none;
+}
+
+@media screen and (max-width:596px) {
+    .menuContainer {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:462px) {
+    .menuConteudo a {
+        font-size: 20px;
+    }
+
+    .fecharMenu {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .menuContainer {
+        width: 40%;
+    }
+}
+
+.animationOpenMenu {
+    animation: slideRight .3s linear forwards;
+}
+
+.animationCloseMenu {
+    animation: slideLeft .2s linear forwards;
+}
+
+@keyframes slideRight {
+    from {
+        left: -200px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -200px;
+    }
+}
+
+.fecharMenu {
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.fecharMenu a {
+    font-size: 30px;
+}
+
+.fecharMenu:hover {
+    color: #fff;
+}
+
+.menuConteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 110px;
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+.menuConteudo a {
+    color: black;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.menuConteudo a:hover {
+    color: #fff;
+}
+
+.sobre {
+    width: 100%;
+    background-color: white;
+}
+
+.sobreConteudo {
+    width: 100%;
+    max-width: 75em;
+    height: auto;
+    margin: 70px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.escrita-sobre {
+    flex: 1;
+}
+
+.escrita-sobre h1 {
+    font-size: 50px;
+    border-left: 10px solid var(--colorPadrao);
+    padding-left: 10px;
+}
+
+.escrita-sobre p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: rgb(80, 80, 80);
+}
+
+.escrita-sobre .sobre-button {
+    padding: 5px 25px;
+    width: 150px;
+    height: 45px;
+    background-color: black;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.escrita-sobre .sobre-button:hover {
+    background-color: var(--colorPadrao);
+    color: black;
+    font-weight: bold;
+}
+
+.galeria {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.galeria h1 {
+    font-size: 45px;
+    color: #fff;
+}
+
+.galeria p {
+    margin-top: 5px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.galeriaConteudo {
+    width: 100%;
+    max-width: 75em;
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.cardsProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardPreco {
+    font-size: 30px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: var(--colorPadrao);
+}
+
+.sifrao {
+    color: white;
+}
+
+.cardNome {
+    color: #494949;
+    font-size: 35px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.cardButton {
+    width: 70%;
+    height: 40px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: .4s;
+    font-size: 20px;
+}
+
+.cardButton:hover {
+    background-color: var(--colorPadrao);
+}
+
+
+.noticias {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.noticias h1 {
+    font-size: 45px;
+}
+
+.noticasConteudo {
+    width: 100%;
+    max-width: 75em;
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.cardNoticias {
+    width: 360px;
+    text-align: left;
+}
+
+.cardNoticias img {
+    width: 100%;
+}
+
+.cardNoticias h2 {
+    margin-top: 10px;
+}
+
+.cardNoticias p {
+    margin-top: 10px;
+}
+
+.cardButtonNoticias {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.cardButtonNoticias:hover {
+    background-color: var(--colorPadrao);
+}
+
+.contato {
+    background-color: #101010;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.contatoConteudo {
+    width: 100%;
+    max-width: 75em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width:1124px) {
+    .contatoConteudo {
+        justify-content: center;
+    }
+}
+
+.formContato {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    overflow: hidden;
+}
+
+.formContato form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formContato form input {
+    height: 40px;
+    padding: 0 0 0 10px;
+    outline: none;
+}
+
+.formContato form textarea {
+    padding: 20px 0 0 10px;
+    outline: none;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.formContato form .enviarContato {
+    width: 130px;
+    height: 40px;
+    background-color: var(--colorPadrao);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.formContato form .enviarContato:hover {
+    color: black;
+    background-color: white;
+}
+
+.lockContato {
+    width: 500px;
+    height: 330px;
+    margin-top: 50px;
+}
+
+.inscrevase {
+    width: 100%;
+    height: auto;
+    background-color: var(--colorPadrao);
+    padding: 30px;
+}
+
+.inscrevaseConteudo {
+    width: 100%;
+    max-width: 65em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.formInscrevase {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:480px) {
+    .inscrevaseConteudo {
+        max-width: 75em;
+    }
+}
+
+.formInscrevase input {
+    width: 70%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    padding: 0 0 0 20px;
+    outline: none;
+}
+
+.submitIsncrevase {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 90px;
+    padding: 30px;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: rgb(158, 158, 158);
+}
