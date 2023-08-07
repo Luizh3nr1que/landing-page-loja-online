@@ -274,6 +274,42 @@ body {
     font-weight: bold;
 }
 
+@media screen and (max-width:479px) {
+    .escrita-sobre h1 {
+        font-size: 40px !important;
+    }
+
+    .escrita-sobre p {
+        font-size: 17px !important;
+    }
+}
+
+@media screen and (max-width:404px) {
+    .escrita-sobre h1 {
+        font-size: 30px !important;
+    }
+
+    .escrita-sobre p {
+        font-size: 15px !important;
+    }
+
+    .sobreConteudo .img img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .sobreConteudo .img img {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width:931px) {
+    .sobreConteudo .img img {
+        width: 400px !important;
+    }
+}
+
 .galeria {
     background-color: black;
     width: 100%;
